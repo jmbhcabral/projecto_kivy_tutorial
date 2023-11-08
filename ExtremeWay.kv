@@ -1,22 +1,38 @@
 #:import layout_examples layout_examples
 #:import widget_examples widget_examples
+#:import navigation_screen_manager navigation_screen_manager
+#:import boxlayout_with_action_bar boxlayout_with_action_bar
 
-MyScreenManager:
+<MainMenu@BoxLayout>:
+    orientation: "vertical"
+    Button:
+        text: "Layouts"
+        on_press: app.manager.push("PageLayoutExample")
+    Button:
+        text: "Widgets"
+        on_press: app.manager.push("WidgetsExample")
+    Button:
+        text: "Images"
+        on_press: app.manager.push("ImagesExample")
 
-<MyScreenManager@ScreenManager>:
+<MyScreenManager>:
     Screen:
-        name: "screen1"
-        Button:
-            text: "Botton1"
-            on_press: root.transition.direction = "left" ; root.current = "screen2"
+        name: "MainMenu"
+        MainMenu:
     Screen:
-        name: "screen2"
-        Button:
-            text: "Botton2"
-            on_press: root.transition.direction = "right" ; root.current = root.previous()
+        name: "PageLayoutExample"
+        BoxLayoutWithActionBar:
+            title: "Layouts"
+            PageLayoutExample:
     Screen:
-        name: "screen3"
-        Button:
-            text: "Botton3"
-            on_press: root.transition.direction = "right" ; root.current = root.previous()
+        name: "WidgetsExample"
+        BoxLayoutWithActionBar:
+            title: "Widgets"
+            WidgetsExample:
+    Screen:
+        name: "ImagesExample"
+        BoxLayoutWithActionBar:
+            title: "Images"
+            ImagesExample:
+
 
