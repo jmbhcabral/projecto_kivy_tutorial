@@ -3,6 +3,7 @@ from kivy.lang import Builder
 from kivy.graphics import Line, Color, Rectangle, Ellipse
 from kivy.metrics import dp
 from kivy.properties import Clock
+from kivy.uix.boxlayout import BoxLayout
 
 Builder.load_file('canvas_examples.kv')
 
@@ -85,4 +86,8 @@ class CanvasExample5(Widget):
 
 
 class CanvasExample6(Widget):
+    pass
+
+
+class CanvasExample7(BoxLayout):
     pass

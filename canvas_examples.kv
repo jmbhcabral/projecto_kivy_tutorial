@@ -1,5 +1,29 @@
 #:set s dp(150)
 
+<CanvasExamplesTabs@TabbedPanel>:
+    do_default_tab: False
+    TabbedPanelItem:
+        text: "1"
+        CanvasExample1:
+    TabbedPanelItem:
+        text: "2"
+        CanvasExample2:
+    TabbedPanelItem:
+        text: "3"
+        CanvasExample3:
+    TabbedPanelItem:
+        text: "4"
+        CanvasExample4:
+    TabbedPanelItem:
+        text: "5"
+        CanvasExample5:
+    TabbedPanelItem:
+        text: "6"
+        CanvasExample6:
+    TabbedPanelItem:
+        text: "7"
+        CanvasExample7:
+
 <CanvasExample1>:
     canvas:
         Rectangle:
@@ -65,3 +89,31 @@
                 Rectangle:
                     size: self.size
                     pos: self.pos
+<CanvasExample7>:
+    RelativeLayout:
+        size: root.size
+        Widget:
+            canvas:
+                Color:
+                    rgb: 0, 0, 1
+                Rectangle:
+                    size: self.size
+    RelativeLayout:
+        size: root.size
+        Widget:
+            canvas:
+                Color:
+                    rgb: 1, 1, 1
+                Rectangle:
+                    size: self.size
+    RelativeLayout:
+        size: root.size
+        Widget:
+            canvas:
+                Color:
+                    rgb: 1, 0, 0
+                Rectangle:
+                    size: self.size
+        
+
+
