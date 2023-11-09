@@ -1,6 +1,10 @@
 from kivy.app import App
 from navigation_screen_manager import NavigationScreenManager
 from kivy.properties import ObjectProperty
+from canvas_examples import (
+    CanvasExample1, CanvasExample2, CanvasExample3, CanvasExample4,
+    CanvasExample5, CanvasExample6
+)
 
 
 class MyScreenManager(NavigationScreenManager):
@@ -12,7 +16,8 @@ class ExtremeWayApp(App):
 
     def build(self):
         self.manager = MyScreenManager()
-        return self.manager
+        # return self.manager
+        return CanvasExample6()
 
 
 ExtremeWayApp().run()
